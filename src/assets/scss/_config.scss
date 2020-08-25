@@ -1,0 +1,252 @@
+//Reset
+$font-1: 'Barlow', sans-serif;
+$font-2: 'Roboto', sans-serif;
+$button-color: #222;
+$link-hover-color: #c90215;
+* {
+	padding:0;
+	margin:0;
+	outline: none;
+	font-family: $font-1;
+}
+body {
+	@media only screen and (max-width: 992px) {
+		padding-top: 60px;
+	}
+}
+@font-face {
+	font-family: 'themify';
+	src:url('../fonts/themify.woff?-fvbane') format('woff'),
+	url('../fonts/themify.ttf?-fvbane') format('truetype'),
+}
+@font-face {
+	font-family: "linea";
+	src:url("fonts/linea.eot");
+	src:url("fonts/linea.eot?#iefix") format("embedded-opentype"),
+	url("fonts/linea.woff") format("woff"),
+	url("fonts/linea.ttf") format("truetype"),
+	url("fonts/linea.svg#linea") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+a{
+	text-decoration: none;
+	outline: none;
+	&:hover {
+		text-decoration:none;
+	}
+}
+.form-control:focus {
+	border-color: transparent;
+	box-shadow: none;
+	outline: none;
+}
+button, button:focus {
+	outline: none;
+}
+.btn-shop-now {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+	width:200px;
+	color: #fff;
+	background: $button-color;
+	font-size: 18px;
+	font-family: $font-2;
+	border-radius: 50px;
+	border:none;
+	text-transform: capitalize;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	transform: perspective(1px) translateZ(0);
+	transition: all .4s;
+	&:hover {
+		color: #fff;
+		background: $link-hover-color;
+		transition: all .4s;
+		&:before {
+			opacity: 1;
+			height: 450%;
+		}
+	}
+	@media only screen and (max-width: 1200px) {
+		&, &::before {
+			width: 150px;
+			height: 40px;
+			font-size: 15px;
+			line-height: 40px; 
+		}
+	}
+	@media only screen and (max-width: 768px) {
+		& {
+			width: 135px;
+			height: 40px;
+			font-size: 15px;
+			line-height: 40px; 
+		}
+	}
+	@media only screen and (max-width: 480px) {
+		& {
+			width: 120px;
+			height: 30px;
+			line-height: 30px;
+			font-size: 13px;
+		}
+	}
+}
+.image-effect {
+	overflow: hidden;
+	img {
+		transition: all .4s;
+		&:hover {
+			transform: scale(1.115,1.115);
+			transition: all .4s;
+		}
+	}
+}
+.back-to-top {
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	z-index: 999;
+	a {
+		font-size: 40px;
+		color: #000;
+		transition: all .4s;
+		&:hover {
+			color: $link-hover-color;
+			transition: all .4s;
+		}
+	}
+}
+.slick-destop {
+	@media only screen and (max-width: 1200px) {
+		transform: scale(1);
+	}
+	@media only screen and (min-width: 1200px) {
+		display: block;
+	}
+}
+.nav-up {
+	top: -60px;
+}
+.menu-mobile {
+	position: fixed;
+	top: 0;
+	z-index: 9;
+	width: 100%;
+	transition: top 0.4s ease-in-out;
+	.header-mobile {
+		background: #222;
+		position: relative; 
+		.header-menu {
+			display: flex;
+			justify-content: space-between;
+			align-items: center; 
+			transition:all 1s ease;
+			.logo img {
+				width: 90px;
+				height: 100%;
+			}
+			.logo {
+				padding-left: 17.5px;
+				width: 100%;
+				a {
+					display: flex;
+					justify-content: start
+				}
+				.logo-mobile {
+					height: 60px;
+					display: flex;
+					align-items: center;
+				}
+			}
+			.menu, .add-to-cart {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.menu {
+				border-right: 1px solid #545454;
+				i {
+					padding: 17.5px;
+				}
+			}
+			.add-to-cart .search {
+				border-right: 1px solid #545454;
+				border-left: 1px solid #545454;
+			}
+			.menu, 
+			.add-to-cart .search,
+			.add-to-cart .cart {
+				width: 60px;
+				height: 60px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin: 0;
+				padding: 0;
+			}
+			.number {
+				top: 10px;
+				left: 30px;
+				color: #222;
+			}
+			i {
+				color: #fff;
+				font-size: 20px;
+				display: inline-block;
+			}
+		}
+		.add-to-cart {
+			display: flex;
+			justify-content: flex-end;
+			.search a {
+				color: #fff;
+				font-size: 20px;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 576px) {
+	.my-container {
+		width: auto;
+		margin: 0 auto;
+		padding: 0 15px; 
+	}
+}
+
+@media only screen and (min-width: 576px) {
+	.my-container {
+		margin: 0 auto;
+		padding: 0 15px;
+	} 
+}
+
+@media only screen and (min-width: 768px) {
+	.my-container {
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.my-container {
+	} 
+}
+
+@media only screen and (min-width: 1200px) {
+	.my-container {
+		padding: 0 30px;
+	}
+}
+
+@media only screen and (min-width: 1600px) {
+	.my-container {
+		max-width: 1570px;
+		padding: 0px;
+	}
+}
+
+

@@ -1,0 +1,278 @@
+// Layout Grid
+.col-banner-3 {
+	flex: 0 0  28.38541666666667%;
+	max-width:  28.38541666666667%;
+	padding: 0;
+} 
+.col-banner-9 {
+	flex: 0 0 71.6145833333333%;
+	max-width: 71.6145833333333%;
+	padding: 0;
+}
+.col-banner-7 {
+	flex:0 0 56.369426751592%;
+	max-width: 56.369426751592%;
+	padding: 0 15px;
+}
+.col-banner-5 {
+	flex: 0 0 43.630573248418%;
+	max-width: 43.630573248418%;
+	padding: 0 15px;
+}
+.col-header-2 {
+	flex:0 0 11.78343949044586%;
+	max-width: 11.78343949044586% ;
+	padding: 0 15px;
+}
+.col-header-10 {
+	flex: 0 0 76.43312101910828%;
+	max-width:  76.43312101910828%;
+	padding: 0 15px;
+}
+.col-tab-8 {
+	flex: 0 0 62.73885350318471%;
+	max-width: 62.73885350318471%;
+	padding: 0 15px;
+}
+.col-tab-4 {
+	flex: 0 0  37.26114649681529%;
+	max-width: 37.26114649681529%;
+	padding: 0 15px;
+}
+.col-product-54 {
+	flex: 0 0 54.61538461538462%;
+	max-width: 54.61538461538462%;
+	padding: 0 15px;
+}
+.col-product-45 {
+	flex: 0 0 45.38461538461538%;
+	max-width: 45.38461538461538%;
+	padding:  0 15px 0 19px;
+}
+.col-banner-home5-62 {
+	flex: 0 0 62.73885350318471%;
+	max-width: 62.73885350318471%;
+	padding: 0 15px;
+}
+.col-banner-home5-38 {
+	flex: 0 0 37.26114649681529%;
+	max-width: 37.26114649681529%;
+	padding: 0 15px;
+}
+.col-4__header-home2 {
+	flex: 0 0 26.71040299906279%;
+	max-width: 26.71040299906279%;
+	padding: 0 15px;
+}
+.col-8__header-home2 {
+	flex: 0 0 73.28959700093721%;
+	max-width: 73.28959700093721%;
+	padding: 0 15px;
+}
+.col-5__product-list-sidebar {
+	flex: 0 0 41.88034188034188%;
+	max-width: 41.88034188034188%;
+	padding: 0 15px;
+	@media only screen and (max-width: 768px) {
+		flex: 0 0 35%;
+		max-width: 35%;
+	}
+	.row {
+		margin: 0;
+	}
+}
+
+.col-2__product-list-sidebar {
+	flex: 0 0 22.34042553191489%;
+	max-width: 22.34042553191489%;
+	padding-left: 10px;	
+	flex: 0 0 10.48376068376068%;
+	max-width: 10.48376068376068%;
+	padding-left: 10px;
+	padding-right: 0px;
+	@media only screen and (max-width: 768px) {
+		flex:0 0 0%;
+		max-width: 0%;
+		display: none;
+	}
+}
+.col-10__product-list-sidebar {
+	flex: 0 0 77.65857446808511%;
+	max-width: 77.65857446808511%;
+	@media only screen and (max-width: 768px) {
+		flex:0 0 100%;
+		max-width: 100%;
+	}
+}
+.col-4__product-list-sidebar {
+	flex: 0 0 31.42393162393162%;
+	max-width: 31.42393162393162%;
+	@media only screen and (max-width: 576px) {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+}
+.col-1__product-list-sidebar {
+	flex: 0 0 8.97435897435897%;
+	max-width: 8.97435897435897%;
+	padding-left: 10px;
+	padding-right: 0px;
+	@media only screen and (max-width: 768px) {
+		display: none;
+		flex: 0 0 0%;
+		max-width: 0%;
+		padding-left: 0;
+	}
+}
+.col-7__product-list-sidebar {
+	flex: 0 0 59.6017094017%;
+	max-width: 59.6017094017%;
+	padding: 0 15px 0 30px;
+	transform: translateX(-15.057217426%);
+	transition: all 0.5s ease-out 0s;
+	@media only screen and (max-width: 768px) {
+		transform: translateX(0);
+		flex: 0 0 67.6017094017%;
+		max-width: 67.6017094017%;
+		padding-left: 15px;
+	}
+	@media only screen and (max-width: 576px ) {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+
+}
+.col-1__shop-page {
+	flex: 0 0 8.07435897435897%;
+	max-width: 8.07435897435897%;
+	padding-left: 10px;
+	padding-right: 10px;
+	@media only screen and (max-width: 1600px) {
+		flex: 0 0 8.97435897435897%;
+		max-width: 8.97435897435897%;
+		padding-left: 10px;
+		padding-right: 0px;
+	}
+	@media only screen and (min-width: 2000px) {
+		flex: 0 0 8.97435897435897%;
+		max-width: 8.97435897435897%;
+		padding-left: 10px;
+		padding-right: 0px;
+	}
+}
+.col-4__shop-page {
+	flex: 0 0 31.42393162393162%;
+	max-width: 31.42393162393162%;
+	@media only screen and (max-width: 576px) {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+}
+.col-7__shop-page {
+	flex: 0 0 59.60170940170941%;
+	max-width: 59.60170940170941%;
+	padding: 0 15px 0 30px;
+	@media only screen and (max-width: 1600px) {
+		flex: 0 0 59.6017094017%;
+		max-width: 59.6017094017%;
+		padding: 0 15px 0 30px;
+	}
+	@media only screen and (max-width: 768px) {
+		transform: translateX(0);
+		flex: 0 0 67.6017094017%;
+		max-width: 67.6017094017%;
+		padding-left: 15px;
+	}
+	@media only screen and (max-width: 576px ) {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+	@media only screen and (min-width: 2000px) {
+		flex: 0 0 59.6017094017%;
+		max-width: 59.6017094017%; 
+	}
+} 
+.col-4__product-list-sidebar,
+.col-1__product-list-sidebar,
+.col-7__product-list-sidebar,
+.col-banner__50,
+.col-tab-8,
+.col-tab-4,
+.col-header-2,
+.col-header-10,
+.col-banner-7,
+.col-banner-5,
+.col-banner-3,
+.col-banner-9 {
+	position: relative;
+	width: 100%;
+}
+@media only screen and (max-width: 576px ) {
+	.col-tab-4,
+	.col-tab-8,
+	.col-banner-7,
+	.col-banner-5{
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+	.col-tab-8 {
+		margin-bottom: 30px;
+	}
+	.col-banner__50 {
+		flex: 0 0 50%;
+		max-width: 50%;
+		padding: 0 15px;
+	}
+}
+@media only screen and (max-width: 480px) {
+	.col-banner-3,
+	.col-banner-9 {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+}
+@media only screen and (min-width: 576px) {
+	.col-tab-4,
+	.col-tab-8,
+	.col-banner-7,
+	.col-banner-5{
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+
+}
+@media only screen and (min-width: 768px) {
+	.col-banner-3 {
+		flex: 0 0  28.38541666666667%;
+		max-width:  28.38541666666667%;
+	}
+	.col-banner-9 {
+		flex: 0 0 71.6145833333333%;
+		max-width: 71.6145833333333%;
+		padding: 0;
+	}
+	.col-banner-7 {
+		flex:0 0 56.369426751592%;
+		max-width: 56.369426751592%;
+	}
+	.col-banner-5 {
+		flex: 0 0 43.630573248418%;
+		max-width: 43.630573248418%;
+	}
+	.col-header-2 {
+		flex:0 0 11.78343949044586%;
+		max-width: 11.78343949044586% ;
+	}
+	.col-header-10 {
+		flex: 0 0 76.43312101910828%;
+		max-width:  76.43312101910828%;
+	}
+	.col-tab-8 {
+		flex: 0 0 62.73885350318471%;
+		max-width: 62.73885350318471%;
+	}
+	.col-tab-4 {
+		flex: 0 0  37.26114649681529%;
+		max-width: 37.26114649681529%;
+	}
+}

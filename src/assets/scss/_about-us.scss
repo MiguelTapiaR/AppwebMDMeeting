@@ -1,0 +1,280 @@
+.slide-about-us {
+	background-image: url('../img/about-us-1.jpg');
+	background-position: center;
+	background-attachment: scroll;
+	background-size:cover;
+	height: auto;
+	max-width: 100%;
+	.title{
+		h3{
+			padding-top: 430px;
+		}
+		p{
+			padding-bottom: 435px;
+		}
+	}
+}
+.section-history {
+	padding-top: 42px;
+	padding-bottom: 43px;
+	color: #222;
+	h3{
+		line-height: 1.5;
+		margin-top: 20px;
+		margin-bottom: 25px;
+	}
+	.year, .detail {
+		font-size: 18px;
+		font-family: $font-2;
+	}
+	.year {
+		color: #888;
+	}
+	.quote{
+		color: $button-color;
+		padding-top: 39px;
+		padding-left: 99px;
+		q{
+			font-family: $font-2;
+		}
+		p{
+			font-family: $font-2;
+			margin-top: 18px;
+			margin-bottom: 22px;
+		}
+		div:last-child{
+			margin-top: 23px;
+			font-size: 14px;
+			font-family: $font-2;
+			span{
+				color: $link-hover-color;
+			}
+		}
+	}
+}
+.section-our-team {
+	padding-top: 73px;
+	padding-bottom: 78px;
+	h3{
+		margin-bottom: 36px;
+		color: #222;
+	}
+	.member{
+		padding-bottom: 30px;
+		.img{
+			position: relative;
+			overflow: hidden;
+			img {
+				transition: all .4s;
+			}
+			&:hover{
+				img{
+					transform:scale(1.225,1.225);
+					transition: all .5s;
+				}
+				/* .overlay{
+					display: none;
+				} */
+			}
+			/* .overlay{
+				position: absolute;
+				left:0; 
+				bottom: 0;
+				width: 100%;
+				height:100%;
+				background: rgba(0,0,0,.7);
+				opacity: .7;
+			} */
+		}
+		.team-member {
+			font-weight: bold;
+			font-size: 20px;
+			color: #222;
+			margin-top: 15px;
+			margin-bottom: -5px;
+		}
+		div:last-child{
+			color: #909090;
+			font-size: 18px;
+		}
+	}
+}
+@media only screen and (max-width: 576px) {
+	.slide-about-us {
+		.title{
+			h3{
+				padding-top: 100px;
+				font-size: 35px;
+			}
+			p{
+				padding-bottom: 100px;
+				font-size: 18px;
+			}
+		}
+	}
+	.section-history {
+		padding-top: 20px;
+		padding-bottom: 43px;
+		.year ,.detail{
+			font-size: 16px;
+		}
+		h3{
+			font-size: 30px;
+			line-height: 1;
+			margin-bottom: 15px;
+		}
+		.quote{
+			padding-top: 15px;
+			padding-left: 15px;
+			font-size: 16px;
+		}
+	}
+	.section-our-team {
+		padding-top: 30px;
+		padding-bottom: 30px;
+		h3{
+			font-size: 30px;
+		}
+		.member{
+			padding-bottom: 15px;
+		}
+	}
+}
+
+@media only screen and (min-width: 576px) {
+	.slide-about-us {
+		.title{
+			h3{
+				padding-top: 150px;
+				font-size: 40px;
+			}
+			p{
+				padding-bottom: 150px;
+				font-size: 20px;
+			}
+		}
+	}
+	.section-history {
+		padding-top: 20px;
+		h3 {
+			font-size: 35px;
+		}
+		.quote {
+			padding-left: 15px;
+			padding-top: 39px;
+		}
+	}
+	.section-our-team {
+		padding-top: 30px;
+		padding-bottom: 30px;
+		h3{
+			font-size: 35px;
+		}
+		.member{
+			padding-bottom: 15px;
+		}
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.slide-about-us {
+		.title{
+			h3{
+				padding-top: 200px;
+				font-size: 40px;
+			}
+			p{
+				padding-bottom: 200px;
+				font-size: 20px;
+			}
+		}
+	}
+	.section-history, .section-our-team {
+		h3 {
+			font-size: 42px;
+			line-height: 1.3;
+		}
+	}
+
+}
+
+@media only screen and (min-width: 992px) {
+	.slide-about-us {
+		.title{
+			h3{
+				padding-top: 250px;
+				font-size: 45px;
+			}
+			p{
+				padding-bottom: 250px;
+				font-size: 23px;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.slide-about-us {
+		.title{
+			h3{
+				padding-top: 300px;
+				font-size: 50px;
+			}
+			p{
+				padding-bottom: 300px;
+				font-size: 25px;
+			}
+		}
+	}
+	.section-history {
+		padding-top: 42px;
+		padding-bottom: 43px;
+		.quote{
+			padding-top: 39px;
+			padding-left: 99px;
+			font-size: 18px;
+			p{
+				margin-top: 18px;
+				margin-bottom: 22px;
+			}
+			h3 {
+				font-size: 50px;
+			}
+		}
+	}
+	.section-our-team {
+		padding-top: 73px;
+		padding-bottom: 83px;
+		h3{
+			font-size: 50px;
+		}
+		.member{
+			padding-bottom: 30px;
+		}
+	}
+}
+
+@media only screen and (min-width: 1600px) {
+	.slide-about-us {
+		.title{
+			h3{
+				padding-top:427px;
+				font-size: 60px;
+			}
+			p{
+				padding-bottom: 429px;
+				font-size: 30px;
+			}
+		}
+	}
+	.section-our-team, .section-history {
+		h3 {
+			font-size: 60px;
+			line-height: 1.2;
+			margin-bottom: 30px;
+		}
+		p {
+			font-size: 18px;
+		}
+	}
+}

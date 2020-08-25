@@ -1,0 +1,83 @@
+/**
+	Theme Name: Eurotas
+	Theme URI: http://engotheme.com/
+	Author: Engo Team
+	Author URI: http://engotheme.com/
+	Description: Engo ABC HTML Template
+	Version: 1.0
+	Last change:	2019/09/26 [Initial Release]
+	License: GNU General Public License v2 or later
+	Tags: two-columns, left-sidebar, fixed-layout, responsive-layout
+	Text Domain: Engotheme
+ **/
+
+ /*------------------------------------------------------------------
+[Table of contents]
+
+	1. Import vendor
+		1.1 Import
+			1.1.1. Google fonts
+			1.1.2. Icon Fonts
+		1.2. Vendors 
+			1.2.1 Bootstrap 4
+			1.2.2 Jquery 
+			1.2.3 Slick 1.8.1
+			1.2.4 wow.js
+			1.2.5 countdown.js
+			1.2.6 barrating
+	2. Config 
+		2.1. Reset
+		2.2. Layout Grid
+	3.Homepage
+		3.1 Homepage v1
+		3.2 Homepage v2
+		3.3 Homepage v3
+		3.4 Homepage v4
+		3.5 Homepage v5
+	4. Product Details
+		4.1 Product Detail V1
+		4.2 Product Detail V2
+		4.3 Product Detail V3
+	5. Slidebar Left
+		5.1 Grid Slibar Left
+		5.2 List Slibar Left
+	6. Our Blog
+		6.1 Our Blog V1
+		6.2 Our Blog V2
+		6.3 Blog Post
+		6.4 Shop Page
+	7. Page 
+		7.1 About Us
+		7.2 Contact Us
+	8. Ecommerce
+		8.1 Popup Modal
+		8.2 Popup Quickview
+		8.3 Menu Mobile
+		8.4 Box Add To Cart
+		8.5 Animation Hedaer
+		8.6 Popup Search
+		8.7 Popup Login/Logout
+
+-------------------------------------------------------------------*/
+@import 'config';
+@import 'layout-grid';
+@import 'homepage-v1';
+@import 'homepage-v2';
+@import 'homepage-v3';
+@import 'homepage-v4';
+@import 'homepage-v5';
+@import 'product-details';
+@import 'slidebar-left';
+@import 'our-blog';
+@import 'shop-page';
+@import 'blog-post';
+@import 'about-us';
+@import 'contact-us';
+@import 'popup-modal';
+@import 'quick-view';
+@import 'menu-mobile';
+@import 'add-to-cart';
+@import 'filter-product';
+@import 'header';
+@import 'popup-search';
+@import 'login-register';

@@ -1,0 +1,234 @@
+// Popup Login/Logout
+.select-account__header {
+	display: flex;
+	margin-left: 20px;
+	align-items: center;
+	a {
+		font-size: 14px;
+		color: #fff;
+	}  
+	.dropdown-toggle::after {
+		font-size: 10px;
+	}
+	.dropdown-account {
+		transform: translateY(15px);
+		transition: all .3s;
+		right: -1px;
+		padding: 25px 20px;
+		min-width: 150px;
+		opacity: 0;
+		visibility: hidden;
+		a {
+			color: #898989;
+			margin-bottom: 7px;
+			padding-left: 0;
+			transition: all .3s;
+			&:hover {
+				color: $link-hover-color;
+				transition: all .3s;
+			}
+		}
+	}
+	&.show {
+		.dropdown-account {
+			transform: translateY(0);
+			opacity: 1;
+			visibility: visible;
+			transition: all .3s;
+		}
+	}
+}
+.select-account-home1 .dropdown-toggle::after {
+	color: #FFF;
+}
+.popup-login__eurotas {
+	.popup-login__destop {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		z-index: 99999;
+		max-width: 500px;
+		width: 500px;
+		box-shadow: 7px 6px 40px 0px rgba(204,204,223,0.16);
+		padding:80px 50px 50px;
+		background: #fff;
+		visibility: hidden;
+		opacity: 0;
+		@media only screen and (max-width: 576px) {
+			max-width: 90%;
+		}
+		@media only screen and (min-width: 576px) {
+			max-width: 500px;
+		}
+		&.active {
+			opacity: 1;
+			visibility: visible;
+			z-index: 999999;
+		}
+		.popup-login__content {
+			.logo-eurotas {
+				border-bottom: 1px solid #ccc;
+				padding-bottom: 20px;
+				text-align: center;
+			}
+			.popup-heading {
+				text-align: center;
+				font-size: 20px;
+				font-weight: 400;
+				color: #222;
+				text-transform: unset;
+				padding-top: 20px;
+			}
+			.form-login {
+				margin-top: 1rem;
+				.form-control {
+					height: 55px;
+					border-radius: 0;
+					border-color: #ced4da;
+				}
+				.form-check {
+					padding-left: 0;
+					text-align: left;
+					font-size: 14px;
+					a {
+						color: #c5c4c4;
+					}
+				}
+				.btn-login {
+					height: 55px;
+					border-radius: 0;
+					background-color: #222;
+					font-size: 14px;
+					color: #fff;
+					text-transform: uppercase;
+					letter-spacing: 2px;
+					font-weight: 600;
+					margin-top: 20px;
+					transition: all .3s ease;
+					border: none;
+					margin-bottom: 70px;
+					&:hover {
+						background: $link-hover-color;
+					}
+				}
+			}
+		}
+	}
+	.popup-register__destop {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		z-index: 99999;
+		max-width: 500px;
+		width: 500px;
+		box-shadow: 7px 6px 40px 0px rgba(204,204,223,0.16);
+		padding: 50px;
+		background: #fff;
+		visibility: hidden;
+		opacity: 0;
+		@media only screen and (max-width: 576px) {
+			max-width: 90%;
+		}
+		@media only screen and (min-width: 576px) {
+			max-width: 500px;
+		}
+		&.active {
+			opacity: 1;
+			visibility: visible;
+			z-index: 999999;
+		}
+		.popup-register__content  {
+			.logo-eurotas {
+				padding-bottom: 30px;
+				text-align: center;
+			}
+			.popup-heading {
+				text-align: center;
+				font-size: 20px;
+				font-weight: 400;
+				color: #222;
+				text-transform: unset;
+				padding-top: 10px;
+				display: none;
+			}
+			.form-login {
+				margin-top: 1rem;
+				.form-control {
+					height: 55px;
+					border-radius: 0;
+					border-color: #ced4da;
+				}
+				.form-check {
+					padding-left: 0;
+					text-align: left;
+					font-size: 14px;
+					a {
+						color: #c5c4c4;
+					}
+				}
+				.btn-login {
+					height: 55px;
+					border-radius: 0;
+					background-color: #222;
+					font-size: 14px;
+					color: #fff;
+					text-transform: uppercase;
+					letter-spacing: 2px;
+					font-weight: 600;
+					margin-top: 20px;
+					transition: all .3s ease;
+					border: none;
+					margin-bottom: 20px;
+					&:hover {
+						background: $link-hover-color;
+					}
+				}
+			}
+		}
+	}
+	.close__popup-login {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		width: 35px;
+		height: 35px;
+		line-height: 35px;
+		text-align: center;
+		a {
+			font-size: 25px;
+			font-weight: bold;
+			display: inline-block;
+			text-transform: uppercase;
+			letter-spacing: 1.5px;
+			color: #222;
+			transition: all .4s;
+			&:hover {
+				color: $link-hover-color;
+				transform: rotate(360deg);
+			}
+		}
+	}
+	.bg__popup-login {
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 999;
+		background: rgba(0,0,0,.7);
+		visibility: hidden;
+		opacity: 0;
+		&.active {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}
+.popup-register,
+.popup-login {
+	&:hover, &:active {
+		background: #fff;
+	}
+}

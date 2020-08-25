@@ -1,0 +1,242 @@
+// Popup Modal
+#modal-overlay{
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 99999;
+	height: 100%;
+	width: 100%;
+	transition: .4s;
+}
+.modal-content{
+	display: none;
+	transition:.4s;;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform:translate(-50%,-50%);
+	z-index: 99;
+	padding: 20px;
+	.content{
+		position: absolute;
+		top: 50%;
+		left:50%;
+		transform:translate(-50%,-50%);
+		text-align: center;
+		width: 75%;
+		h2{
+			font-size: 36px;
+			font-weight: bold;
+			margin-bottom: 14px;
+			span{
+				color: $link-hover-color;
+			}
+		}
+		p{
+			font-size:18px;
+			margin-bottom: 21px;
+		}
+		form{
+			input{
+				padding: 25px 20px;
+				border:none;
+				border-radius: 50px;;
+				background: #f4f4f4;
+				
+			}
+			::placeholder {
+				font-family: $font-2;
+				font-size: 18px;
+				color: #ddd;
+			}
+			button{	
+				margin: 50px auto 0;
+			}
+		}
+	}
+	.btn-close{
+		position: absolute;
+		top:-10px;
+		right:10px;
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+		background: #f4f4f4;
+		border:none;
+		border-radius: 50%;
+		transition: all .4s;
+		&:hover {
+			color: $link-hover-color;
+			background: #222;
+		}
+		span{
+			font-size: 14px;
+			font-weight: 800;
+			transition: all .5s;
+		}
+	}
+	@media only screen and (max-width: 576px) {
+		max-width: 90%;
+		.col-6 {
+			&:first-child {
+				display: none;
+			}
+			&:nth-child(2) {
+				width: 100%;
+				max-width: 100%;
+				flex: 0 0 100%;
+				position: relative;
+				.content {
+					width: 100%;
+					padding: 20px 0px;
+					position: relative;
+					transform: none;
+					margin:0 auto;
+					top: 0;
+					left: 0;
+					h2 {
+						font-size: 30px;
+					}
+					p {
+						font-size: 16px;	
+					}
+					form {
+						input {
+							padding:20px;
+						}
+						button {
+							margin: 30px auto 0;
+						}
+					}
+				}
+			}
+		}
+	}
+	@media only screen and (min-width: 576px) {
+		width: 75%;
+		padding: 15px;
+		.col-6 {
+			&:first-child {
+				display: none;
+			}
+			&:nth-child(2) {
+				width: 100%;
+				max-width: 100%;
+				flex: 0 0 100%;
+				position: relative;
+				.content {
+					padding: 40px 0px;
+					position: relative;
+					transform: none;
+					margin: 0 auto;
+					top: 0;
+					left: 0;
+				}
+			}
+		}
+	}
+	@media only screen and (min-width: 768px) {
+		width: 75%;
+		.col-6 {
+			&:first-child {
+				display: block;
+			}
+			&:nth-child(2) {
+				width: 50%;
+				max-width: 50%;
+				flex: 0 0 50%;
+				.content {
+					padding: 20px 20px 20px 0;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%,-50%);
+					width: 100%;
+					h2 {
+						font-size: 23px;
+					}
+					p {
+						font-size: 14px;
+					}
+					form {
+						input {
+							padding: 20px;
+						}
+						button {
+							margin-top: 25px;
+							width: 130px;
+							height: 35px;
+							line-height: 35px;
+						}
+					}
+				}
+			}
+		}
+	} 
+	@media only screen and (min-width: 992px) {
+		.col-6 {
+			&:nth-child(2) {
+				.content {
+					padding: 0 20px;
+					h2 {
+						font-size:28px;
+					}
+					p {
+						font-size: 16px;
+					}
+					form {
+						input {
+							padding: 18px;
+						}				
+						button {
+							margin-top: 25px;
+						}
+					}
+				}
+			}
+		}	
+	}
+	@media only screen and (min-width: 1200px) {
+		width: 855px;
+		.col-6 {
+			&:nth-child(2) {
+				.content{
+					h2{
+						font-size: 36px;
+					}
+					p {
+						font-size: 18px;
+					}
+					form {
+						input {
+							padding: 25px 20px;
+						}
+						button {
+							margin-top: 50px;
+							width: 200px;
+							height: 50px;
+							line-height: 50px;
+						}
+					}
+				}
+			}
+		}
+	}
+	@media only screen and (min-width: 1600px) {
+		width: 1260px;
+		padding: 20px;
+		.col-6 {
+			&:nth-child(2) {
+				.content {
+					padding: 0 60px ;
+					p{
+						padding: 0 19px;
+					}
+				}
+			}
+		}
+	}
+}

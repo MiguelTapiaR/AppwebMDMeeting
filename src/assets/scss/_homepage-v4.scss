@@ -1,0 +1,701 @@
+// Homepage v4
+.col-40 {
+	width: 40%; 
+}
+.col-60 {
+	width: 60%; 
+}
+.col-49 {
+	width: 49.0446%; 
+}
+.col-51 {
+	width: 50.9554%; 
+}
+.header__homepage-v4 {
+	.col-5__header-home4 {
+		flex: 0 0 43.630573248418%;
+		max-width: 43.630573248418%;
+		padding: 0 15px;
+	}
+}
+.header-home4{
+	&>div{
+		&:nth-child(2){
+			&>div{
+				margin-left: 27px;
+				cursor: pointer;
+			}
+		}
+	}
+	i{
+		font-size: 20px;
+		color: #222;
+	}
+	.cart-home4{
+		padding-top: 5px;
+		margin-left: 0;
+		cursor: pointer;
+		.shopping-cart{
+			i{
+				color: #222;
+			}
+		}
+		.number{
+			background: #222;
+			top: 0; 
+			left: 10px;
+			span{
+				color: #fff;
+			}
+		}
+	}
+}
+
+.section-slide-home4{
+	.slider-info {
+		transform: translateY(-30px);
+		opacity: 0;
+		visibility: hidden;
+		transition: .5s linear .6s;
+	}
+	.slider-content {
+		transform: translateX(300px);
+		opacity: 0;
+		visibility: hidden;
+		transition: .5s linear 1s
+	}
+	.slider-info, .slider-content {
+		&.active {
+			transform: none;
+			opacity: 1;
+			visibility: visible;
+		}
+	} 
+	.slideshow-thumb {
+		img {
+			transform: translateX(300px);
+			opacity: 0;
+			visibility: hidden;
+			transition: .5s linear 1s;
+			&.active {
+				transform: none;
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+	.slide-header .img-slick {
+		transform: translateX(-300px);
+		opacity: 0;
+		visibility: hidden;
+		transition: .5s linear 1s;
+		&.active {
+			transform: none!important;
+			opacity: 1!important;
+			visibility: visible!important;
+		}
+
+	}
+	h1{
+		font-size: 100px;
+		margin-top:199px;
+		line-height: 1;
+		margin-bottom:12px;
+	}
+	p{
+		font-size: 18px;
+		font-family: $font-2;
+		margin-right: 104px;
+		margin-bottom:45px;
+	}
+	.slide-header{
+		width: 100%;	}
+	.slick-button3 {
+		border:1px solid #222;
+		border-radius: 50%;
+		width: 40px;
+		height: 40px;
+		display: flex;
+		justify-content: center;
+		align-items:center;
+		margin:0 10px;
+		.arrow3 {
+			font-size: 14px;
+		}
+		&:hover, &:focus {
+			background:#222;
+			.arrow3 {
+				color: #fff;
+			} 
+		}
+	}
+	.prev3, .next3 {
+		position: absolute;
+		bottom:-55px;
+		z-index: 1;
+		color: #222; 
+		background: none;
+	}
+	.prev3, .next3 {
+		left: 42%;
+		margin-right: 10px;
+	}
+	.next3 {
+		margin-right: 70px;
+	}
+}
+
+.section-product-home4 {
+	margin-top:111px;
+}
+
+.section-banner-home4-v1 {
+	.banner{
+		position: relative;
+		overflow: hidden;
+	}
+	.title{
+		position: absolute;
+		top:50%;
+		left:12.82%;
+		transform:translatey(-50%);
+		p{
+			color:#fff;
+			font-size:30px;
+			&:first-child{
+				margin-bottom: 0;
+			}
+			&:nth-child(3){
+				margin-bottom: 56px;
+			}
+		}
+		h3{
+			font-size: 60px;
+			color:#fff;
+			margin-bottom: 12px;
+		}
+	}
+}
+
+.section-newsletter-home4 {
+	background-image: url('../img/page4_bg1.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center ;
+	position: relative;
+	.newsletter{
+		padding-top:93px;
+		h3{
+			color: #222;	
+			margin-bottom:15px;
+		}
+		p{
+			font-size: 18px;
+			color: #484d4b;
+			font-family: $font-2;
+			margin-bottom:45px;
+		}
+		form{
+			padding-bottom: 120px;
+			width: 70%;
+			margin: 0 auto;
+			input{
+				font-size: 18px;
+				font-family: $font-2;
+				color: #ddd;
+				padding:25px 28px;
+				margin-right:10px;
+				border-radius: 28px;
+				border:none;
+			}
+			::placeholder {
+				font-family: $font-2;
+				font-size: 18px;
+				color: #ddd;
+			}
+			button{
+				font-size: 18px;
+				font-family: $font-2;
+				color: #fff;
+				background: #222;
+				border-radius: 60px;
+				border:none;
+				position: relative;
+				overflow: hidden;
+				z-index: 1;
+				transition: all .4s;
+				&:hover {
+					transition: all .4s;
+					background: $link-hover-color;
+				}
+			}
+
+		}
+	}
+}
+
+.section-brand-home4 {
+	padding-top: 85px;
+	padding-bottom:68px;
+}
+
+.section-instagram-home4 {
+	padding-top:61px;
+	background: #f4f4f4;
+	padding-bottom: 0;
+	.icon{
+		font-size: 36px;
+		margin-bottom: 12px;
+		h3{
+			color: #222;
+			margin-bottom: 38px;
+		}
+		a{
+			color: #222;
+			&:hover{
+				color: #c50215;
+			}
+		}
+
+	}
+}
+
+@media only screen and (max-width: 576px){
+	.col-51 {
+		display: none;
+	}
+	.col-40 , .col-60, .col-49 {
+		width: 100%; 
+	}
+	.section-slide-home4 {
+		h1{
+			font-size: 40px;
+			margin-top:50px;
+			margin-bottom:12px;
+		}
+		p{
+			font-size: 14px;
+			margin:25px 0 45px;
+			margin-right: 0;
+		}
+		.slide-header{
+			width: 100%;
+		}
+		.slick-button3 {
+			width: 30px;
+			height: 30px;
+			font-size: 12px;
+		}
+		.prev3, .next3 {
+			bottom:-55px;
+			left: 42%;
+			transform: translateX(-50%);	
+
+		}
+		.next3 {
+			margin-left: 60px;
+		}
+	}
+
+	.section-product-home4 {
+		margin-top: 50px;
+	}
+	.section-banner-home4-v1 {
+		margin-top: 90px;
+	}
+	.section-banner-home4-v1 .title{
+		left:5.82%;
+		h3{
+			margin-bottom: 0;
+			font-size: 30px;
+		}
+		p{
+			font-size:18px;
+			&:nth-child(3){
+				margin-bottom: 15px;
+			}
+		}
+	}
+
+	.section-newsletter-home4 .newsletter{
+		padding-top:60px;
+		h3{
+			font-size: 35px;
+		}
+		p{
+			font-size: 14px;
+			margin-bottom:20px;
+		}
+		form{
+			padding-bottom: 30px;
+			flex-direction: column;
+			input{
+				padding: 20px 25px;
+			}
+			::-webkit-input-placeholder{
+				font-size: 14px;
+
+			}
+			button{
+				width: 100px;
+				font-size: 14px;
+				width: 40%;
+				height: 41px;
+				margin: 15px auto 0;
+			}
+
+		}
+	}
+
+	.section-brand-home4{
+		padding-top:0;
+		padding-bottom: 27px;
+	}
+
+	.section-instagram-home4{
+		.icon{
+			font-size: 36px;
+			margin-bottom: 0px;
+		}
+		h3{
+			margin-bottom: 20px;
+			font-size: 35px;
+		}
+	}
+}
+@media only screen and (max-width: 480px) {
+	.section-banner-home4-v1 {
+		margin-top: 20px;
+		img {
+			height: 140px;
+			object-fit: cover;
+		}
+		.title {
+			h3 {
+				font-size: 23px;
+			}
+			p {
+				font-size: 16px;
+				&:nth-child(3) {
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+	.section-newsletter-home4 .newsletter form {
+		width: 100%;
+	}
+}
+@media only screen and (min-width: 576px){
+	.col-51 {
+		display: none;
+	}
+	.col-49 , .col-40, .col-60 {
+		width: 100%;
+	}
+
+	.section-slide-home4 {
+		h1{
+			font-size: 45px;
+			margin-top:50px;
+		}
+		p{
+			font-size: 16px;
+			margin:25px 0 45px;
+			max-width: 476px;
+		}
+		.slide-header{
+			width: 100%;
+		}
+		.slick-button3 {
+			width: 30px;
+			height: 30px;
+			margin:0 15px;
+			font-size: 12px;
+		}
+		.prev3, .next3 {
+			bottom:-55px;
+			left: 42%;
+			transform: translateX(-50%);	
+		}
+		.next3{
+			margin-left: 60px;
+		}
+
+	}
+
+	.section-product-home4 {
+		margin-top: 50px;
+	}
+
+	.section-banner-home4-v1 .title {
+		left:5.82%;
+		h3{
+			margin-bottom: 0;
+			font-size: 35px;
+		}
+		p{
+			font-size:20px;
+			&:nth-child(3){
+				margin-bottom:15px;
+			}
+		}
+	}
+
+	.section-newsletter-home4 .newsletter {
+		margin-top: 30px;
+		padding-top:60px;
+		h3{
+			font-size: 44px;
+		}
+		p{
+			font-size: 16px;
+			margin-bottom:20px;
+		}
+		form{
+			padding-bottom: 30px;
+			input{
+				padding: 20px 25px;
+			}
+			::-webkit-input-placeholder{
+				font-size: 14px;
+
+			}
+			button{
+				width: 150px;
+				font-size: 14px;
+			}
+
+		}
+	}
+
+	.section-brand-home4{
+		padding:0;
+	}
+
+	.section-instagram-home4{
+		.icon{
+			font-size: 36px;
+			margin-bottom: 0;
+		}
+		h3{
+			margin-bottom: 20px;
+			font-size: 42px;
+		}
+	}
+}
+
+@media only screen and (min-width: 768px){
+	.col-49 {
+		width: 49.0446%;
+	}
+	.col-51{
+		display: block;	
+	}
+	.col-40 {
+		width: 40%;
+	}
+	.col-60 {
+		width: 60%;
+	}
+	.section-slide-home4{
+		h1{
+			font-size: 40px;
+			margin-top: 40px;
+		}
+		p {
+			margin:  20px 0;
+		}
+		.slide-header{
+			.img-slick {
+				width: 100%;
+			}
+		}
+		.prev3, .next3 {
+			left: 30%;
+			transform: translateX(-50%);
+		}
+		.next3 {
+			margin-left: 70px;
+		}
+		.slick-button3 {
+			width: 40px; 
+			height: 40px;
+			bottom:  -50px;
+		}
+	}
+
+	.section-banner-home4-v1 .title {
+		h3{
+			font-size: 44px;
+		}
+		p{
+			font-size:22px;
+		}
+	}
+	.section-instagram-home4 h3 {
+		font-size: 44px;
+	}
+}
+
+@media only screen and (min-width: 992px){
+	.col-49 {
+		width: 49.0446%;
+	}
+	.col-51{
+		display: block;	
+	}
+
+	.section-slide-home4{
+		h1{
+			font-size: 56px;
+			margin-top: 150px;
+		}
+		.slide-header{
+			.img-slick {
+				width: 75%;
+			}
+		}
+		.prev3, .next3 {
+			left: 30%;
+			transform: translateX(-50%);
+		}
+		.next3 {
+			margin-left: 70px;
+		}
+		.slick-button3 {
+			width: 40px; 
+			height: 40px;
+		}
+	}
+	.section-banner-home4-v1 {
+		margin-top: 20px;
+	}
+}
+
+@media only screen and (min-width: 1200px){
+	.section-slide-home4 {
+		h1{
+			font-size: 69px;
+			max-width: 373px;
+			margin-top: 180px;
+		}
+		p{
+			margin-top: 0;
+			margin-bottom: 27px;
+		}
+		.slick-button3 {
+			bottom: -55px;
+		}
+	}
+
+	.section-banner-home4-v1 .title{
+		left:10.82%;
+		top: 52%;
+		p{
+			font-size: 25px;
+			&:nth-child(3){
+				margin-bottom: 37px;
+			}
+		}
+		h3{
+			font-size: 50px;
+		}
+	}
+
+	.section-brand-home4{
+		padding-top: 85px;
+		padding-bottom:68px;
+	}
+
+	.section-newsletter-home4 .newsletter{
+		padding-top:93px;
+		h3{
+			font-size: 50px;
+		}
+		form button {
+			width: 180px;
+		}
+	}
+
+	.section-instagram-home4 h3 {
+		font-size: 50px;
+	}
+
+}
+
+@media only screen and (min-width: 1600px){
+	.section-slide-home4{
+		h1{
+			font-size: 100px;
+			margin-top:193px;
+			margin-bottom:12px;
+			max-width: 100%;
+		}
+		p{
+			font-size: 18px;
+			margin-right: 80px;
+			margin-bottom:45px;
+			max-width: 588px;
+		}
+		.slick-button3 {
+			width: 50px;
+			height: 50px;
+		}
+		.prev3 ,.next3 {
+			bottom: -87px;
+		}
+		.prev3, .next3 {
+			left: 30.555555555%;
+		}
+		.next3 {
+			margin-left: 85px;
+		}
+	}
+
+	.section-product-home4{
+		padding-top:53px;
+	}
+
+	.section-banner-home4-v1 .title h3 {
+		font-size: 60px;
+		margin-bottom: 12px;
+	}
+
+	.section-banner-home4-v1{
+		margin-bottom: 53px;
+		margin-top: 78px;
+	}
+
+	.section-newsletter-home4 .newsletter{
+		margin-top: 65px;
+		h3{
+			font-size: 60px;
+		}
+		p{
+			font-size: 18px;
+			margin-bottom:39px;
+		}
+		form{
+			padding-bottom: 120px;
+			width: 60%;
+			::-webkit-input-placeholder{
+				font-size: 18px;
+			}
+			input{
+				font-size: 18px;
+				padding:25px 28px;
+			}
+			button{
+				width: 200px;
+				font-size: 18px;
+			}
+		} 
+	}
+
+	.section-instagram-home4 h3 {
+		font-size: 60px;
+		margin-bottom: 37px;
+	}
+
+}
