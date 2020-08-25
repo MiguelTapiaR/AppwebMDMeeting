@@ -1,0 +1,133 @@
+<main>
+
+     <section class="section-banner-home4-v1">
+        <div class="my-container">
+            <div class="banner relative image-effect">
+                <img src="assets/img/img_registro_evento.jpg" alt="_img banner Homepage4" class="img-fluid w-100">
+                <div class="title absolute">
+                    <!-- <p class="para-fs30">Olive Blazer</p> -->
+                    <h3 class="heading-3 font-weight-bold text-capitalize">Agendar y publicar un evento</h3>
+                    <!-- <p class="para-fs30 font-weight-bold ">Season Off 30 - 10%</p> -->
+                    <!-- <a href="grid-slidebar-left.html" class="btn-shop-now">More Info</a> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-contact-us">
+        <div class="my-container">
+            <div class="row">
+                <div class="col-xl-3 col-lg-6 col-md-12 col-sm-12 detail">
+                    <br><h3 class="heading-3  mb-0">Agendar evento</h3><br>
+                    <p class="col-10 para-fs18 font-2 pl-0" style="padding-right: 20px">
+                        Para agendar un evento debes llenar los siguientes campos con la información
+                        requerida. <br><br>
+                        Una vez que hayas terminado presiona el boton agendar.<br><br>
+                        Tu publicación será revisada por los administradores del sitio y te avisaremos cuando sea publicada.<br><br>
+                        Si tienes alguna duda, escribenos al siguiente correo:
+                    </p>
+                    <ul>
+                        <!-- <li><i class="lnr lnr-home"></i><span>Address: </span> Hill Stress, Beverly Hill.</li> -->
+                        <!-- <li><i class="lnr lnr-phone"></i><span>Telephone: </span> +01 234 567 89</li> -->
+                        <li><i class="lnr lnr-envelope"></i><span>Email: </span> <a href="#">example@domain.com</a></li>
+                        <!-- <li><i class="lnr lnr-clock"></i><span>Open Door: </span> 8:00 - 19:00, Mon - Sat</li> -->
+                    </ul>
+                </div>
+                <div class="col-xl-9 col-lg-6 col-md-12 col-sm-12 contact">
+                    <br><h4 class="heading-3">Introduce la siguiente información:</h4><br>
+                    <form action="/action_page.php">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6 margin-bot-30">
+                                <input type="text" class="form-control" placeholder="Nombre del evento*" name="name">
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 margin-bot-30">
+                                <input type="text" class="form-control" placeholder="Institución Organizadora*" name="email">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6 margin-bot-30">
+                                <label>Fecha de Inicio del Evento:</label>
+                                <input type="date" class="form-control" placeholder="Fecha de inicio" name="subject">
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 margin-bot-30">
+                                <label>Fecha de Finalización del Evento:</label>
+                                <input type="date" class="form-control" placeholder="Fecha de inicio" name="subject">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6 margin-bot-30">
+                                <!-- <input type="text" class="form-control" placeholder="País del evento*" name="name"> -->
+                                <label for="pais">&nbsp; &nbsp; País donde se llevará acabo el evento:</label><br>
+                                <select name="pais" id="pais" class="custom-file-upload">
+                                  <option class="form-control" value="volvo">México</option>
+                                  <option value="saab">Estados unidos</option>
+                                  <option value="mercedes">Brasil</option>
+                                  <option value="audi">Alemania</option>
+                                </select>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 margin-bot-30">
+                                <!-- <input type="text" class="form-control" placeholder="Seleccione una clasificación el evento*" name="name"> -->
+                                <label for="categoria">&nbsp; &nbsp; Categorías:</label><br>
+                                <select name="pais" id="categoria" class="custom-file-upload">
+                                    <option class="form-control" value="volvo">Categorías</option>
+                                    <option value="saab">Cardiología</option>
+                                    <option value="mercedes">Neurología</option>
+                                    <option value="audi">Oncología</option>
+                                    <option value="audi">ETC</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6 margin-bot-30">
+                                <input type="text" class="form-control" placeholder="Ciudad del evento*" name="email">
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 margin-bot-30">
+
+                                <input type="text" class="form-control" placeholder="Sitio web del evento*" name="email">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12 margin-bot-30">
+                                <input type="text" class="form-control" placeholder="Lugar" name="subject">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6 margin-bot-30">
+                                <!-- <input type="file" class="form-control" placeholder="Programa de Actividades (PDF)" name="subject"> -->
+                                <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
+                                <!-- <label>Seleccione el programa del evento</label> -->
+                                <label for="file-upload" class="custom-file-upload">
+                                  Subir promocional &nbsp &nbsp &nbsp <i class="fa fa-cloud-upload"></i>
+                                </label>
+                                <input id="upload-imagen" type="file"/>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 margin-bot-30">
+                                <!-- <input type="file" class="form-control" placeholder="Programa de Actividades (PDF)" name="subject"> -->
+                                <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
+                                <!-- <label>Seleccione el programa del evento</label> -->
+                                <label for="upload-programa" class="custom-file-upload">
+                                  Subir programa PDF &nbsp &nbsp &nbsp <i class="fa fa-cloud-upload"></i>
+                                </label>
+                                <input id="file-upload" type="file"/>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <textarea name="message" id="message" cols="30" rows="10" placeholder="Descripción del evento*" class="w-100"></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" name="submit">Agendar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</main>
