@@ -1,6 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireModule } from '@angular/fire';
 
+ 
 /* Rutas */
 import { AppRoutingModule } from './app-routing.module';
 
@@ -14,6 +18,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { DetailComponent } from './pages/detail/detail.component';
 import { ScheduleComponent } from './pages/schedule/schedule.component';
 import { UserComponent } from './pages/user/user.component';
+import { environment } from 'src/environments/environment';
 
 
 @NgModule({
@@ -30,7 +35,11 @@ import { UserComponent } from './pages/user/user.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -13,66 +13,10 @@
                     <h4 class="heading-4 font-weight-bold">Eventos agendados</h4>
                     <ul>
 
-                        <li class="item-menu">
-                            <a href="javascript:void(0)">Alergología</a>
+                        <li *ngFor="let item of itemscategoria | async" lass="item-menu">
+                            <a href="javascript:void(0)">{{item.nombreEN}}</a>
                         </li>
-                        <li class="item-menu">
-                            <a href="javascript:void(0)">Anestesiología</a>
-                        </li>
-                        <li class="item-menu">
-                            <a href="javascript:void(0)">Cardiología</a>
-                        </li>
-                        <li class="item-menu">
-                            <a href="javascript:void(0)">Gastroenterología</a>
-                        </li>
-                        <li class="item-menu">
-                            <a href="javascript:void(0)">Endocrinología</a>
-                        </li>
-                        <li class="item-menu">
-                            <a href="javascript:void(0)">Epidemiología</a>
-                        </li>
-                        <li class="item-menu">
-                            <a href="javascript:void(0)">Geriatría</a>
-                        </li>
-                        <li class="item-menu">
-                            <a href="javascript:void(0)">Hepatología</a>
-                        </li>
-                        <li class="item-menu">
-                            <a href="javascript:void(0)">Hematología</a>
-                        </li>
-                        <li class="item-menu">
-                            <a href="javascript:void(0)">Infectología</a>
-                        </li>
-                        <li class="item-menu">
-                            <a href="javascript:void(0)">Medicina interna</a>
-                        </li>
-                        <li class="item-menu">
-                            <a href="javascript:void(0)">Medicina forense</a>
-                        </li>
-                        <li class="item-menu">
-                            <a href="javascript:void(0)">Nefrología</a>
-                        </li>
-                        <li class="item-menu">
-                            <a href="javascript:void(0)">Neumología</a>
-                        </li>
-                        <li class="item-menu">
-                            <a href="javascript:void(0)">Neurología</a>
-                        </li>
-                        <li class="item-menu">
-                            <a href="javascript:void(0)">Nutriología</a>
-                        </li>
-                        <li class="item-menu">
-                            <a href="javascript:void(0)">Oncología</a>
-                        </li>
-                        <li class="item-menu">
-                            <a href="javascript:void(0)">Pediatría</a>
-                        </li>
-                        <li class="item-menu">
-                            <a href="javascript:void(0)">Psiquiatría</a>
-                        </li>
-                        <li class="item-menu">
-                            <a href="javascript:void(0)">Reumatología</a>
-                        </li>
+                        
                         <!-- <li class="item-menu">
                             <a href="javascript:void(0)" class="d-flex justify-content-between align-items-center">
                                 Sport Shoes
@@ -304,66 +248,10 @@
                     <div class="our-blog">
                         <h4 class="heading-4 font-weight-bold">Eventos agendados</h4>
                         <ul>
-                            <li class="item-menu">
-                                <a href="javascript:void(0)">Alergología</a>
+                            <li *ngFor="let item of itemscategoria | async" lass="item-menu">
+                                <a href="javascript:void(0)">{{item.nombreEN}}</a>
                             </li>
-                            <li class="item-menu">
-                                <a href="javascript:void(0)">Anestesiología</a>
-                            </li>
-                            <li class="item-menu">
-                                <a href="javascript:void(0)">Cardiología</a>
-                            </li>
-                            <li class="item-menu">
-                                <a href="javascript:void(0)">Gastroenterología</a>
-                            </li>
-                            <li class="item-menu">
-                                <a href="javascript:void(0)">Endocrinología</a>
-                            </li>
-                            <li class="item-menu">
-                                <a href="javascript:void(0)">Epidemiología</a>
-                            </li>
-                            <li class="item-menu">
-                                <a href="javascript:void(0)">Geriatría</a>
-                            </li>
-                            <li class="item-menu">
-                                <a href="javascript:void(0)">Hepatología</a>
-                            </li>
-                            <li class="item-menu">
-                                <a href="javascript:void(0)">Hematología</a>
-                            </li>
-                            <li class="item-menu">
-                                <a href="javascript:void(0)">Infectología</a>
-                            </li>
-                            <li class="item-menu">
-                                <a href="javascript:void(0)">Medicina interna</a>
-                            </li>
-                            <li class="item-menu">
-                                <a href="javascript:void(0)">Medicina forense</a>
-                            </li>
-                            <li class="item-menu">
-                                <a href="javascript:void(0)">Nefrología</a>
-                            </li>
-                            <li class="item-menu">
-                                <a href="javascript:void(0)">Neumología</a>
-                            </li>
-                            <li class="item-menu">
-                                <a href="javascript:void(0)">Neurología</a>
-                            </li>
-                            <li class="item-menu">
-                                <a href="javascript:void(0)">Nutriología</a>
-                            </li>
-                            <li class="item-menu">
-                                <a href="javascript:void(0)">Oncología</a>
-                            </li>
-                            <li class="item-menu">
-                                <a href="javascript:void(0)">Pediatría</a>
-                            </li>
-                            <li class="item-menu">
-                                <a href="javascript:void(0)">Psiquiatría</a>
-                            </li>
-                            <li class="item-menu">
-                                <a href="javascript:void(0)">Reumatología</a>
-                            </li>
+                           
                             <!-- <li class="item-menu">
                                 <a href="javascript:void(0)" class="d-flex justify-content-between align-items-center">
                                     Publicacione
@@ -595,16 +483,18 @@
                             </form>
                         </div>
                     </div>
-                    <div class="row post margin-bot-30">
+
+
+                    <div *ngFor="let item of items | async"  class="row post margin-bot-30">
                         <div class="col-xl-6 col-lg-6 col-md-6 ">
                             <a href="detail.html">
-                                <img src="assets/img/our-blog-v1.9.jpg" alt="_img news" class="img-fluid w-100" >
+                                <img [src]="item.imagenPromocional" alt="_img news" class="img-fluid w-100" >
                                 <span class="overlay"></span>
                             </a>
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6 ">
                             <div class="caption">
-                                <a href="detail.html" class="font-weight-bold ">European Congress of Radiology</a>
+                                <a href="detail.html" class="font-weight-bold ">{{item.nombre}}</a>
                             </div>
 
                             <div class="d-flex time">
@@ -614,7 +504,7 @@
                                 </div> -->
                                 <div class="date">
                                     <i class="ti-time"></i>
-                                    <span>Date: 15 - 19 Julyy 2020</span>
+                                    <span>{{item.fechaInicio}}</span>
                                 </div>
                                 <!-- <div class="date">
                                     <i class="ti-world"></i>
@@ -638,225 +528,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row post margin-bot-30">
-                        <div class="col-xl-6 col-lg-6 col-md-6 ">
-                            <a href="detail.html">
-                                <img src="assets/img/a-12.jpg" alt="_img news" class="img-fluid w-100">
-                                <span class="overlay"></span>
-                            </a>
-                        </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6 ">
-                            <div class="caption">
-                                <a href="detail.html" class="font-weight-bold ">ECIO 2020</a>
-                            </div>
-
-                            <div class="d-flex time">
-                                <!-- <div class="comment">
-                                    <a href="#"><i class="ti-comments"></i>
-                                    05 Comments</a>
-                                </div> -->
-                                <div class="date">
-                                    <i class="ti-time"></i>
-                                    <span>Date: 02 - 05 Nov 2020</span>
-                                </div>
-                                <!-- <div class="date">
-                                    <i class="ti-world"></i>
-                                    <span>Date: 05 January 2019</span>
-                                </div> -->
-                            </div><br>
-                            <!-- <div class="caption">
-                                <a href="javascript:void(0)" class="font-weight-bold ">Native Shoes x Goop</a>
-                            </div> -->
-                            <div class="details font-2">
-                                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-                            </div>
-
-
-                            <div class="author d-flex align-items-center">
-                                <!-- <div class="img" >
-                                    <img src="img/our-blog-v1-circle1.jpg" alt="_img author Ourblog v1" class="img-fluid" >
-                                    <span class="overlay"></span>
-                                </div> -->
-                                <a href="javascript:void(0)">Nice, France</a>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="row post margin-bot-30">
-                        <div class="col-xl-6 col-lg-6 col-md-6 ">
-                            <a href="detail.html">
-                                <img src="assets/img/a-14.jpg" alt="_img news" class="img-fluid w-100">
-                                <span class="overlay"></span>
-                            </a>
-                        </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6 ">
-                            <div class="caption">
-                                <a href="detail.html" class="font-weight-bold ">III Congreso Cáncer en la mujer Oncología y Radioterapia</a>
-                            </div>
-
-                            <div class="d-flex time">
-                                <!-- <div class="comment">
-                                    <a href="#"><i class="ti-comments"></i>
-                                    05 Comments</a>
-                                </div> -->
-                                <div class="date">
-                                    <i class="ti-time"></i>
-                                    <span>Date: 16 Oct 2020</span>
-                                </div>
-                                <!-- <div class="date">
-                                    <i class="ti-world"></i>
-                                    <span>Date: 05 January 2019</span>
-                                </div> -->
-                            </div><br>
-                            <!-- <div class="caption">
-                                <a href="javascript:void(0)" class="font-weight-bold ">Native Shoes x Goop</a>
-                            </div> -->
-                            <div class="details font-2">
-                                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-                            </div>
-
-
-                            <div class="author d-flex align-items-center">
-                                <!-- <div class="img" >
-                                    <img src="img/our-blog-v1-circle1.jpg" alt="_img author Ourblog v1" class="img-fluid" >
-                                    <span class="overlay"></span>
-                                </div> -->
-                                <a href="javascript:void(0)">Ciudad de México, México</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row post margin-bot-30">
-                        <div class="col-xl-6 col-lg-6 col-md-6 ">
-                            <a href="detail.html">
-                                <img src="assets/img/a-13.jpg" alt="_img news" class="img-fluid w-100">
-                                <span class="overlay"></span>
-                            </a>
-                        </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6 ">
-                            <div class="caption">
-                                <a href="detail.html" class="font-weight-bold ">Expo Meedical 2020</a>
-                            </div>
-
-                            <div class="d-flex time">
-                                <!-- <div class="comment">
-                                    <a href="#"><i class="ti-comments"></i>
-                                    05 Comments</a>
-                                </div> -->
-                                <div class="date">
-                                    <i class="ti-time"></i>
-                                    <span>Date: 23 - 25 Sep 2020</span>
-                                </div>
-                                <!-- <div class="date">
-                                    <i class="ti-world"></i>
-                                    <span>Date: 05 January 2019</span>
-                                </div> -->
-                            </div><br>
-                            <!-- <div class="caption">
-                                <a href="javascript:void(0)" class="font-weight-bold ">Native Shoes x Goop</a>
-                            </div> -->
-                            <div class="details font-2">
-                                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-                            </div>
-
-
-                            <div class="author d-flex align-items-center">
-                                <!-- <div class="img" >
-                                    <img src="img/our-blog-v1-circle1.jpg" alt="_img author Ourblog v1" class="img-fluid" >
-                                    <span class="overlay"></span>
-                                </div> -->
-                                <a href="javascript:void(0)">Buenos Aires, Argentina</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row post margin-bot-30">
-                        <div class="col-xl-6 col-lg-6 col-md-6 ">
-                            <a href="detail.html">
-                                <img src="assets/img/a-15.jpg" alt="_img news" class="img-fluid w-100">
-                                <span class="overlay"></span>
-                            </a>
-                        </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6 ">
-                            <div class="caption">
-                                <a href="detail.html" class="font-weight-bold ">ISUOG Virtual World Congress</a>
-                            </div>
-
-                            <div class="d-flex time">
-                                <!-- <div class="comment">
-                                    <a href="#"><i class="ti-comments"></i>
-                                    05 Comments</a>
-                                </div> -->
-                                <div class="date">
-                                    <i class="ti-time"></i>
-                                    <span>Date: 16 - 18 Oct 2020</span>
-                                </div>
-                                <!-- <div class="date">
-                                    <i class="ti-world"></i>
-                                    <span>Date: 05 January 2019</span>
-                                </div> -->
-                            </div><br>
-                            <!-- <div class="caption">
-                                <a href="javascript:void(0)" class="font-weight-bold ">Native Shoes x Goop</a>
-                            </div> -->
-                            <div class="details font-2">
-                                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-                            </div>
-
-
-                            <div class="author d-flex align-items-center">
-                                <!-- <div class="img" >
-                                    <img src="img/our-blog-v1-circle1.jpg" alt="_img author Ourblog v1" class="img-fluid" >
-                                    <span class="overlay"></span>
-                                </div> -->
-                                <a href="javascript:void(0)">ONLINE</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row post margin-bot-30">
-                        <div class="col-xl-6 col-lg-6 col-md-6 ">
-                            <a href="detail.html">
-                                <img src="assets/img/a-16.jpg" alt="_img news" class="img-fluid w-100">
-                                <span class="overlay"></span>
-                            </a>
-                        </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6 ">
-                            <div class="caption">
-                                <a href="detail.html" class="font-weight-bold ">World Congress of International Medicine</a>
-                            </div>
-
-                            <div class="d-flex time">
-                                <!-- <div class="comment">
-                                    <a href="#"><i class="ti-comments"></i>
-                                    05 Comments</a>
-                                </div> -->
-                                <div class="date">
-                                    <i class="ti-time"></i>
-                                    <span>Date: 02 - 05 Dic 2020</span>
-                                </div>
-                                <!-- <div class="date">
-                                    <i class="ti-world"></i>
-                                    <span>Date: 05 January 2019</span>
-                                </div> -->
-                            </div><br>
-                            <!-- <div class="caption">
-                                <a href="javascript:void(0)" class="font-weight-bold ">Native Shoes x Goop</a>
-                            </div> -->
-                            <div class="details font-2">
-                                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-                            </div>
-
-
-                            <div class="author d-flex align-items-center">
-                                <!-- <div class="img" >
-                                    <img src="img/our-blog-v1-circle1.jpg" alt="_img author Ourblog v1" class="img-fluid" >
-                                    <span class="overlay"></span>
-                                </div> -->
-                                <a href="javascript:void(0)">Cancún, México</a>
-                            </div>
-                        </div>
-                    </div>
-
-
+                  
 
 
                     <div class="section-next-page section-next-page__blog1">

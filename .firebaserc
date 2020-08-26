@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "eventosmedicos-23627": {
+      "hosting": {
+        "MDMeeting": [
+          "eventosmedicos-23627"
+        ]
+      }
+    }
+  }
+}
