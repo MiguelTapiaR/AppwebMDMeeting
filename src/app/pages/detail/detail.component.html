@@ -2,13 +2,13 @@
     
 
     <section class="section-banner-home4-v1">
-        <div class="my-container">
+        <div class="my-container" style="box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);" >
             <div class="banner relative image-effect">
-                <img src="assets/img/img_detail.jpg" alt="_img banner Homepage4" class="img-fluid w-100">
+                <img [src]="item.imagenPromocional" alt="_img banner Homepage4" class="img-fluid w-100" style="box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);" >
                 <div class="title absolute">
                     <!-- <p class="para-fs30">Olive Blazer</p> -->
-                    <h3 class="heading-3 font-weight-bold text-capitalize">ECIO 2020</h3>
-                    <p class="para-fs30 font-weight-bold ">Noviembre 02 - 05</p>
+                    <!-- <h3 class="heading-3 font-weight-bold text-capitalize">{{item.nombre}}</h3>
+                    <p class="para-fs30 font-weight-bold ">{{fechaInicio.toDate()| date: 'dd/MM/yyyy HH:mm'}}</p> -->
                     <!-- <a href="grid-slidebar-left.html" class="btn-shop-now">More Info</a> -->
                 </div>
             </div>
@@ -42,54 +42,59 @@
                     <!-- </div> -->
                     <div class="section-description">
                         <ul class="tabs d-flex justify-content-between col-xl-8 col-lg-10 col-md-8">
-                            <li class="tabs-link current font-weight-bold" data-tab="tab-1">Descripción</li>
+                            <li class="tabs-link current font-weight-bold" data-tab="tab-1">{{item.nombre}}</li>
                             <!-- <li class="tabs-link font-weight-bold" data-tab="tab-2">Additionals info</li> -->
                             <!-- <li class="tabs-link font-weight-bold" data-tab="tab-3">Reviews (1)</li> -->
                         </ul>
                         <div id="tab-1" class="tab-content current">
                             <div class="row">
                                 <div class="col-xl-7 col-lg-7 col-md-7">
-                                    <br><h4>ECIO 2020</h4>
-                                    <p class="font-2">Breve descripción. Breve descripción. Breve descripción. Breve descripción. Breve descripción. Breve descripción. Breve descripción. Breve descripción. </p>
-                                    <h4>Información de lugar y fecha</h4>
-                                    <p class="font-2"><strong>País:<br>Ciudad:<br>Lugar:<br>Fecha:</strong></p>
-
+                                    <br><h4><i class="ti-info-alt"></i> {{item.descripcion}}</h4>
+                                    <h4><i class="ti-briefcase"></i> {{item.institucionOrganizadora}}</h4>
+                                    <h4><i class="ti-map-alt"></i> Lugar: {{item.lugar}}</h4>
+                                    <h4><i class="ti-time"></i> Del {{fechaInicio.toDate()| date: 'dd/MM/yyyy HH:mm'}} al {{fechaFin.toDate()| date: 'dd/MM/yyyy HH:mm'}}</h4>
+                                
                                     <h4>Links</h4>
                                     <div class="link-page">
                                         <div>
-                                            <label class="font-weight-bold mb-0">Programa de actividades:</label>
-                                            <a href="javascript:void(0)"><i class="ti-agenda"></i></a>
+                                            
+                                            <label class="font-weight-bold mb-0"></label>
+                                            <a *ngIf="back.lang == 'en'" href="{{item.programaActividades}}" target="_blank"><i class="ti-agenda"></i> Activities program</a>
+                                            <a *ngIf="back.lang == 'es'" href="{{item.programaActividades}}" target="_blank"><i class="ti-agenda"></i> Programa de actividades</a>
                                             <!-- <a href="javascript:void(0)">https://www.ecio.org/</a> -->
                                             <!-- <a href="javascript:void(0)">Maxi,</a>
                                             <a href="javascript:void(0)">Harpa,</a>
                                             <a href="javascript:void(0)">Originals</a> -->
-                                        </div>
+                                        </div><br>
                                         <div>
-                                            <label class="font-weight-bold mb-0">Sitio Web:</label>
-                                            <a href="javascript:void(0)">https://www.ecio.org/</a>
+                                            <label class="font-weight-bold mb-0"></label>
+                                            <a *ngIf="back.lang == 'en'" href="{{item.linkPaginaEvento}}" target="_blank"><i class="ti-world"></i> Website</a>
+                                            <a *ngIf="back.lang == 'es'" href="{{item.linkPaginaEvento}}" target="_blank"><i class="ti-world"></i> Sitio web</a>
                                             <!-- <a href="javascript:void(0)">Maxi,</a>
                                             <a href="javascript:void(0)">Harpa,</a>
                                             <a href="javascript:void(0)">Originals</a> -->
-                                        </div>
+                                        </div><br>
                                         <div>
-                                            <label class="font-weight-bold mb-0">Categories:</label>
-                                            <a href="javascript:void(0)">Oncología</a>
+                                            <label *ngIf="back.lang == 'en'" class="font-weight-bold mb-0">Categorie: </label>
+                                            <label *ngIf="back.lang == 'es'" class="font-weight-bold mb-0">Categoría: </label>
+                                            <a *ngIf="back.lang == 'en'" [routerLink]="['/selected-categorie', item.idCategoria, item.nombreCategoriaEN, item.nombreCategoriaES]">{{item.nombreCategoriaEN}}</a>
+                                            <a *ngIf="back.lang == 'es'" [routerLink]="['/selected-categorie', item.idCategoria, item.nombreCategoriaEN, item.nombreCategoriaES]">{{item.nombreCategoriaES}}</a>
                                             <!-- <a href="javascript:void(0)">Maxi,</a>
                                             <a href="javascript:void(0)">Harpa,</a>
                                             <a href="javascript:void(0)">Originals</a> -->
-                                        </div>
+                                        </div><br>
                                         <div>
-                                            <label class="font-weight-bold mb-0">Tag:</label>
-                                            <a href="javascript:void(0)">Congresos</a>
+                                            <label *ngIf="back.lang == 'en'" class="font-weight-bold mb-0">Type: </label>
+                                            <label *ngIf="back.lang == 'es'" class="font-weight-bold mb-0">Tipo: </label>
+                                            <a *ngIf="back.lang == 'en'" [routerLink]="['/selected-type', item.idTipoEvento, item.nombreTipoEN, item.nombreTipoES]">{{item.nombreTipoEN}}</a>
+                                            <a *ngIf="back.lang == 'es'" [routerLink]="['/selected-type', item.idTipoEvento, item.nombreTipoEN, item.nombreTipoES]">{{item.nombreTipoES}}</a>
                                             <!-- <a href="javascript:void(0)">Fashion,</a>
                                             <a href="javascript:void(0)">Trending</a> -->
-                                        </div>
+                                        </div><br>
                                         <div class="share">
-                                            <label class="font-weight-bold mb-0">Share:</label>
+                                            <label *ngIf="back.lang == 'en'" class="font-weight-bold mb-0">Share:</label>
+                                            <label *ngIf="back.lang == 'es'" class="font-weight-bold mb-0">Compartir:</label>
                                             <a href="javascript:void(0)"><i class="ti ti-facebook"></i></a>
-                                            <a href="javascript:void(0)"><i class="ti-twitter-alt"></i></a>
-                                            <a href="javascript:void(0)"><i class="ti-pinterest"></i></a>
-                                            <a href="javascript:void(0)"><i class="ti-youtube"></i></a>
                                             <a href="javascript:void(0)"><i class="ti-instagram"></i></a>
                                         </div>
                                     </div>
@@ -97,7 +102,7 @@
                                 </div>
                                 <div class="col-xl-5 col-lg-5 col-md-5">
                                     <div class="img">
-                                        <img src="assets/img/P-Detail-v1-8.jpg" alt="_img image" class="img-fluid w-100">
+                                        <img [src]="item.imagenPromocional" alt="_img image" class="img-fluid w-100">
                                     </div>
                                 </div>
 

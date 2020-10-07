@@ -17,43 +17,56 @@
     </ul>
     <div class="menu-clone">
         <ul class="main-menu">
-            <li class="menu-item menu-item-has-children">
-                <a href="javascript:void(0)"  class="slide-dropdown">Mi cuenta <span class="lnr lnr-chevron-right down"></span></a>
-                <div class="submenu">
-                    <ul class="menu-shop-style">
-                        <a class="dropdown-item popup-login" href="javascript:void(0)">Log in</a>
-                        <a  routerLink="user">Register</a>
-                    </ul>
-                </div>
-            </li>
+            
+
 
             <li class="menu-item ">
-                <a routerLink="" class="slide-dropdown">Eventos <span ></span></a>
+                <a  *ngIf="back.lang == 'en'" routerLink="" class="slide-dropdown">Events <span ></span></a>
+                <a *ngIf="back.lang == 'es'" routerLink="" class="slide-dropdown">Eventos <span ></span></a>
                 <div class="submenu">
             
                 </div>
             </li>
 
-            <li class="menu-item ">
+            <!-- <li class="menu-item ">
                 <a routerLink="about" class="slide-dropdown">Acerca de nosotros <span ></span></a>
                 <div class="submenu">
                
                 </div>
+            </li> -->
+
+            <li class="menu-item ">
+                <a *ngIf="back.lang == 'es'" routerLink="schedule" class="slide-dropdown">Agendar un evento <span ></span></a>
+                <a *ngIf="back.lang == 'en'" routerLink="schedule" class="slide-dropdown">Create event <span ></span></a>
+               
             </li>
 
             <li class="menu-item ">
-                <a routerLink="schedule" class="slide-dropdown">Agendar un evento <span ></span></a>
-                <div class="submenu">
-                 
-                </div>
-            </li>
-
-            <li class="menu-item ">
-                <a routerLink="contact" class="slide-dropdown">Contacto <span ></span></a>
+                <a *ngIf="back.lang == 'es'"routerLink="contact" class="slide-dropdown">Contacto <span ></span></a>
+                <a *ngIf="back.lang == 'en'" routerLink="contact" class="slide-dropdown">Contact <span ></span></a>
                 <div class="submenu">
                 </div>
             </li>
    
+            <li *ngIf="back.idUser === '-1'" class="menu-item ">
+                <a  *ngIf="back.lang == 'en'"  routerLink="login" class="slide-dropdown">Login <span ></span></a>
+                <a *ngIf="back.lang == 'es'"  routerLink="login" class="slide-dropdown">Iniciar sesión <span ></span></a>
+             
+            </li>
+
+            <li  *ngIf="back.idUser === '-1'"class="menu-item ">
+                <a  *ngIf="back.lang == 'en'" routerLink="user" class="slide-dropdown">Create account <span ></span></a>
+                <a *ngIf="back.lang == 'es'" routerLink="user" class="slide-dropdown">Crear cuenta <span ></span></a>
+          
+            </li>
+
+
+            <li  *ngIf="back.idUser !== '-1'" class="menu-item ">
+                <a  *ngIf="back.lang == 'en'" (click)="logout()" class="slide-dropdown">Logout <span ></span></a>
+                <a *ngIf="back.lang == 'es'" (click)="logout()" class="slide-dropdown">Cerrar sesión <span ></span></a>
+          
+            </li>
+
         </ul>
         <div class="image-effect ">
             <a href="javascript:void()0">
@@ -144,7 +157,7 @@
 </div>
 <!-- POPUP LOGIN -->
 <div class="popup-login__eurotas">
-    <div class="popup-login__destop">
+    <div class="popup-login__destop"#myModal>
         <div class="popup-login__content">
             <div class="box_content_accountdestop">
                 <div class="logo-eurotas">
@@ -156,21 +169,21 @@
                 <div class="form-login">
                     <form action="/action_page.php" method="POST">
                         <div class="form-group">
-                            <input type="email" class="form-control" name="email" placeholder="Email address" required>
+                            <input type="email" class="form-control" name="email" placeholder="Email address" required [(ngModel)]="email" #em="ngModel">
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control" name="pwd" placeholder="Password" required>
+                            <input type="password" class="form-control" name="pwd" placeholder="Password" required [(ngModel)]="password" #passwo="ngModel">
                         </div>
                         <div class="form-check">
                             <a href="javascript:void(0)" class="recover-password">Forgot your password?</a>
                         </div>
-                        <button type="submit" class="btn-login w-100" value="log in">LOG IN</button>
+                        <button type="" (click)="login()" class="btn-login w-100"  value="log in">LOG IN</button>
                     </form>
                 </div>
             </div>
         </div>
         <div class="close__popup-login">
-            <a href="javascript:void(0)" class="js-close__popup-login lnr lnr-cross"></a>
+            <a href="javascript:void(0)" #closebutton class="js-close__popup-login lnr lnr-cross"></a>
         </div>
     </div>
     <div class="popup-register__destop ">
@@ -214,9 +227,9 @@
                 </div>
                 <div class="header-dropdown d-flex">
                     <div class="dropdown-select">
-                        <select name="language" id="language">
-                            <option value="ENG" selected>ENG</option>
-                            <option value="ESP">ESP</option>
+                        <select (change)="cambiarIdioma($event)" name="language" id="language">
+                            <option value='en' selected>ENG</option>
+                            <option value="es">ESP</option>
                          
                         </select>
                     </div>

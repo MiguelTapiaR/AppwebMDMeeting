@@ -1,9 +1,9 @@
 
 export interface Evento{
-    id: string;
+    id?: string;
     descripcion: string;
-    fechaFin: string;
-    fechaInicio: string;
+    fechaFin: number;
+    fechaInicio: number;
     idUsuario: string;
     imagenPromocional: string;
     institucionOrganizadora: string;
@@ -15,6 +15,8 @@ export interface Evento{
     idCategoria: string;
     nombreTipoEN: string;
     nombreTipoES: string;
-    idTipo: string;
+    idTipoEvento: string;
     programaActividades: string;
+    estadoPublicacion: number;
+    fechaCreacion: number;
 }

@@ -1,24 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-import { Evento } from '../../interfaces/evento.interface';
-import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
+import { AngularFirestoreCollection, AngularFirestore } from '@angular/fire/firestore';
+import { ActivatedRoute } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { Categoria } from '../../interfaces/categoria.interface';
-import { BackendService } from '../../services/backend.service';
-import { TranslateService } from '@ngx-translate/core';
-
-
-
-export interface EventoId extends Evento { id: string; }
-export interface CategoriaId extends Categoria { id: string; }
+import { Categoria } from 'src/app/interfaces/categoria.interface';
+import { Evento } from 'src/app/interfaces/evento.interface';
+import { BackendService } from 'src/app/services/backend.service';
+import { EventoId, CategoriaId } from '../inicio/inicio.component';
 
 @Component({
-  selector: 'app-inicio',
-  templateUrl: './inicio.component.html',
-  styleUrls: ['./inicio.component.css']
+  selector: 'app-selected-categorie',
+  templateUrl: './selected-categorie.component.html',
+  styleUrls: ['./selected-categorie.component.css']
 })
-export class InicioComponent implements OnInit {
-
+export class SelectedCategorieComponent implements OnInit {
+  idRecibido = '';
+  nombreCategoriaEN = '';
+  nombreCategoriaES = '';
   terminoBusquedaNombre: string;
   activeLang = 'en';
   private shirtCollection: AngularFirestoreCollection<Evento>;
@@ -31,8 +30,21 @@ export class InicioComponent implements OnInit {
   private tipoEventoCollection: AngularFirestoreCollection<Categoria>;
   tipoEventocategoria: Observable<CategoriaId[]>;
 
+  // tslint:disable-next-line:max-line-length
+  constructor(private route: ActivatedRoute, private afs: AngularFirestore, public back: BackendService, private translate: TranslateService) { }
 
-  constructor(afs: AngularFirestore, public back: BackendService, private translate: TranslateService) {
+  ngOnInit(): void {
+    window.scrollTo(0, 0);
+    this.route.params
+    .subscribe( parametros => {
+    this.idRecibido = parametros.id;
+    this.nombreCategoriaEN = parametros.name;
+    this.nombreCategoriaES = parametros.nombre;
+    console.log(parametros.id);
+    this.obtenerInformacion(this.idRecibido);
+   });
+  }
+  obtenerInformacion(idRecibido): void{
 
     console.log(navigator.language);
     if (navigator.language.includes('es')){
@@ -40,7 +52,7 @@ export class InicioComponent implements OnInit {
     }
     this.translate.setDefaultLang(this.back.lang);
 
-    this.shirtCollection = afs.collection<Evento>('eventos', ref => ref.orderBy('fechaInicio'));
+    this.shirtCollection = this.afs.collection<Evento>('eventos', ref => ref.where('idCategoria', '==', this.idRecibido));
     // .snapshotChanges() returns a DocumentChangeAction[], which contains
     // a lot of information about "what happened" with each change. If you want to
     // get the data and the id use the map operator.
@@ -52,7 +64,7 @@ export class InicioComponent implements OnInit {
       }))
     );
 
-    this.categoriasCollection = afs.collection<any>('categorias', ref => ref.orderBy('nombre-en'));
+    this.categoriasCollection = this.afs.collection<any>('categorias', ref => ref.orderBy('nombre-en'));
     // .snapshotChanges() returns a DocumentChangeAction[], which contains
     // a lot of information about "what happened" with each change. If you want to
     // get the data and the id use the map operator.
@@ -65,7 +77,7 @@ export class InicioComponent implements OnInit {
         return { id, ...data };
       }))
     );
-    this.tipoEventoCollection = afs.collection<any>('tiposEvento', ref => ref.orderBy('nombre-en'));
+    this.tipoEventoCollection = this.afs.collection<any>('tiposEvento', ref => ref.orderBy('nombre-en'));
     // .snapshotChanges() returns a DocumentChangeAction[], which contains
     // a lot of information about "what happened" with each change. If you want to
     // get the data and the id use the map operator.
@@ -78,17 +90,6 @@ export class InicioComponent implements OnInit {
         return { id, ...data };
       }))
     );
-  //   this.categoriasCollection.valueChanges({ idField: 'id' }).subscribe(data  => {
-  //     console.log(id);
-  //     console.log(data[0]['nombre-en']);
-  //   });
-   }
-
-  ngOnInit(): void {
-    window.scrollTo(0, 0);
   }
 
 }
-
-
-

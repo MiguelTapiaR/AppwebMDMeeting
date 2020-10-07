@@ -1,5 +1,5 @@
 
 export interface Categoria{
-    nombre-en: string;
+    nombreEn: string;
     nombreES: string;
 }

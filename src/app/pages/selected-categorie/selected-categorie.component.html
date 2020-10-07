@@ -2,8 +2,10 @@
     <section class="section-slide img-fluid">
         <div class="title text-center">
             <!-- <img src="img/md_meeting_logo_2.png"width="350px"> -->
-            <h3 class="heading-3">MD Meeting</h3>
-            <p class="para-fs30 m-0"><a href="#" class="text-white" >Learning Together</a></p>
+            <h3 *ngIf="back.lang == 'en'" class="heading-3">{{nombreCategoriaEN}}</h3>
+            <h3 *ngIf="back.lang == 'es'" class="heading-3">{{nombreCategoriaES}}</h3>
+            <p *ngIf="back.lang == 'en'" class="para-fs30 m-0"><a href="#" class="text-white" >Categories</a></p>
+            <p *ngIf="back.lang == 'es'" class="para-fs30 m-0"><a href="#" class="text-white" >Categorías</a></p>
         </div>
     </section>
     <section>
@@ -12,12 +14,13 @@
                 <div class="our-blog">
                     <h4 *ngIf="back.lang == 'en'" class="heading-4 font-weight-bold">Categories</h4>
                     <h4 *ngIf="back.lang == 'es'" class="heading-4 font-weight-bold">Categorías</h4>
+                   
                     <ul>
 
                         <li *ngFor="let item of itemscategoria | async" lass="item-menu">
                             
-                            <a [routerLink]="['/selected-categorie', itemscategoria.id, itemscategoria['nombre-en'], itemscategoria['nombre-es-MX']]"*ngIf="back.lang === 'es'">{{ item['nombre-es-MX']}}</a>
-                            <a [routerLink]="['/selected-categorie', itemscategoria.id, itemscategoria['nombre-en'], itemscategoria['nombre-es-MX']]"*ngIf="back.lang === 'en'">{{ item['nombre-en']}}</a>
+                            <a href="javascript:void(0)"*ngIf="back.lang === 'es'">{{ item['nombre-es-MX']}}</a>
+                            <a href="javascript:void(0)"*ngIf="back.lang === 'en'">{{ item['nombre-en']}}</a>
                         </li>
                         
                     </ul>
@@ -27,10 +30,11 @@
                     <div class="col-12">
                         <h4  *ngIf="back.lang == 'en'" class="heading-4">Event type</h4>
                         <h4  *ngIf="back.lang == 'es'" class="heading-4"> Tipo de evento</h4>
+                        
                         <ul class="list-tag d-flex flex-wrap">
-                            <li *ngFor="let itemTipo of tipoEventocategoria | async" lass="item-menu">
-                                <a [routerLink]="['/selected-type', itemTipo.id, itemTipo['nombre-en'], itemTipo['nombre-es-MX']]"*ngIf="back.lang === 'es'">{{ itemTipo['nombre-es-MX']}}</a>
-                                <a [routerLink]="['/selected-type', itemTipo.id, itemTipo['nombre-en'], itemTipo['nombre-es-MX']]"*ngIf="back.lang === 'en'">{{ itemTipo['nombre-en']}}</a>
+                            <li *ngFor="let item of tipoEventocategoria | async" lass="item-menu">
+                                <a href="javascript:void(0)"*ngIf="back.lang === 'es'">{{ item['nombre-es-MX']}}</a>
+                                <a href="javascript:void(0)"*ngIf="back.lang === 'en'">{{ item['nombre-en']}}</a>
                             </li>
                          
                         </ul> 
@@ -46,12 +50,13 @@
             <div class="row">
                 <div class="col-xl-3 col-lg-3  column-left slidebar-col-3">
                     <div class="our-blog">
+                        
                         <h4 *ngIf="back.lang == 'en'" class="heading-4 font-weight-bold">Categories</h4>
                         <h4 *ngIf="back.lang == 'es'" class="heading-4 font-weight-bold">Categorías</h4>
                         <ul>
                             <li *ngFor="let item of itemscategoria | async" lass="item-menu">
                                 <a [routerLink]="['/selected-categorie', item.id, item['nombre-en'], item['nombre-es-MX']]"*ngIf="back.lang === 'es'">{{ item['nombre-es-MX']}}</a>
-                                <a [routerLink]="['/selected-categorie', item.id, item['nombre-en'], item['nombre-es-MX']]"*ngIf="back.lang === 'en'">{{ item['nombre-en']}}</a>
+                                <a [routerLink]="['/selected-categorie', item.id, item['nombre-en'], item['nombre-es-MX']]" *ngIf="back.lang === 'en'">{{ item['nombre-en']}}</a>
                             </li>
                            
                            
@@ -59,6 +64,7 @@
                     </div>
                    
                     <div class="tags">
+                        
                         <h4 *ngIf="back.lang == 'en'" class="heading-4">Event type</h4>
                         <h4 *ngIf="back.lang == 'es'" class="heading-4">Tipo de evento</h4>
                         <ul class="list-tag d-flex flex-wrap">
@@ -74,6 +80,7 @@
                 </div>
                 <div class="col-xl-9 col-lg-9  column-right">
                     <div class="bread-crumb ">
+                        
                         <h4 *ngIf="back.lang == 'en'" class="heading-4 font-weight-bold">Events</h4>
                         <h4 *ngIf="back.lang == 'es'" class="heading-4 font-weight-bold">Eventos</h4>
                         <div class="tag">
@@ -86,6 +93,7 @@
                                 <div class="input-group input-search">
                                     <input  *ngIf="back.lang == 'en'" type="search" class="form-control" name="search" placeholder="Search..." [(ngModel)]="terminoBusquedaNombre" #nombre>
                                     <input  *ngIf="back.lang == 'es'" type="search" class="form-control" name="search" placeholder="Buscar..." [(ngModel)]="terminoBusquedaNombre" #nombre>
+                                    
                                     <div class="input-group-append">
                                         <span class="input-group-text">
                                             <i class="lnr lnr-magnifier"></i>

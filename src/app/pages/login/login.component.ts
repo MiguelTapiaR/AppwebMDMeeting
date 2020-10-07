@@ -1,21 +1,20 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { InfoPaginaService } from '../../services/info-pagina.service';
-import Swal from 'sweetalert2';
 import { Router } from '@angular/router';
-import { BackendService } from '../../services/backend.service';
+import { BackendService } from 'src/app/services/backend.service';
+import { InfoPaginaService } from 'src/app/services/info-pagina.service';
+import Swal from 'sweetalert2';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
 })
-export class HeaderComponent implements OnInit {
-  @ViewChild('closebutton') closebutton;
+export class LoginComponent implements OnInit {
   email: string;
   password: string;
 
-  constructor( public _servicio: InfoPaginaService, public auth: AngularFireAuth, private router: Router,
+  constructor( public auth: AngularFireAuth, private router: Router,
                public back: BackendService ) { }
 
   ngOnInit(): void {
@@ -26,7 +25,7 @@ export class HeaderComponent implements OnInit {
     console.log(this.email + this.password);
     this.auth.signInWithEmailAndPassword(this.email, this.password).then(res => {
 
-      this.closebutton.nativeElement.click();
+
       this.back.setUser(res.user.uid);
       Swal.fire({
         icon: 'success',
@@ -41,18 +40,12 @@ export class HeaderComponent implements OnInit {
       const errorCode = error.code;
       const errorMessage = error.message;
       console.log(errorCode + errorMessage);
-      
+
     });
   }
   logout(): void{
 
     this.auth.signOut();
     this.back.setUser('-1');
-  }
-  cambiarIdioma(lang): void{
-
-    console.log(lang.target.value);
-    this.back.setLanguage(lang.target.value);
-
   }
 }

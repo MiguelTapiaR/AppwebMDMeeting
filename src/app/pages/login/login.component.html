@@ -1,0 +1,120 @@
+<main *ngIf="back.lang == 'en'">
+
+
+
+    <section class="section-banner-home4-v1">
+        <div class="my-container">
+            <div class="banner relative image-effect">
+                <img src="assets/img/img_registro_usuario.jpg" alt="_img banner Homepage4" class="img-fluid w-100">
+                <div class="title absolute">
+                    <!-- <p class="para-fs30">Olive Blazer</p> -->
+                    <h3 class="heading-3 font-weight-bold text-capitalize">Login</h3>
+                    <!-- <p class="para-fs30 font-weight-bold ">Season Off 30 - 10%</p> -->
+                    <!-- <a href="grid-slidebar-left.html" class="btn-shop-now">More Info</a> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-contact-us">
+        <div class="my-container">
+            <div class="row">
+                <div class="col-xl-3 col-lg-6 col-md-12 col-sm-12 detail">
+                    <br><h3 class="heading-3  mb-0">Login</h3><br>
+                    <p class="col-10 para-fs18 font-2 pl-0" style="padding-right: 20px">
+                                       </p>
+                   
+                </div>
+                <div class="col-xl-9 col-lg-6 col-md-12 col-sm-12 contact">
+                    <br><br>
+                    <h4 class="heading-3">Fill the information:</h4>
+                    <br>
+                    <form action="/action_page.php">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6 margin-bot-30">
+                                <input type="text" class="form-control" placeholder="Email*" name="email" [(ngModel)]="email" #email2="ngModel">
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 margin-bot-30">
+                                <input type="password" class="form-control" placeholder="Password*"name="password" [(ngModel)]="password" #password2="ngModel">
+                            </div>
+                        </div>
+                        
+
+
+
+
+
+
+
+                        <button type="submit"(click)="login()" name="submit">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+</main>
+<main *ngIf="back.lang == 'es'">
+
+
+
+    <section class="section-banner-home4-v1">
+        <div class="my-container">
+            <div class="banner relative image-effect">
+                <img src="assets/img/img_registro_usuario.jpg" alt="_img banner Homepage4" class="img-fluid w-100">
+                <div class="title absolute">
+                    <!-- <p class="para-fs30">Olive Blazer</p> -->
+                    <h3 class="heading-3 font-weight-bold text-capitalize">Inicia sesión</h3>
+                    <!-- <p class="para-fs30 font-weight-bold ">Season Off 30 - 10%</p> -->
+                    <!-- <a href="grid-slidebar-left.html" class="btn-shop-now">More Info</a> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-contact-us">
+        <div class="my-container">
+            <div class="row">
+                <div class="col-xl-3 col-lg-6 col-md-12 col-sm-12 detail">
+                    <br><h3 class="heading-3  mb-0">Inicia sesión</h3><br>
+                    <p class="col-10 para-fs18 font-2 pl-0" style="padding-right: 20px">
+                                       </p>
+                   
+                </div>
+                <div class="col-xl-9 col-lg-6 col-md-12 col-sm-12 contact">
+                    <br><br>
+                    <h4 class="heading-3">Introduce la siguiente información:</h4>
+                    <br>
+                    <form action="/action_page.php">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6 margin-bot-30">
+                                <input type="text" class="form-control" placeholder="Correo electrónico*" name="email" [(ngModel)]="email" #email2="ngModel">
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 margin-bot-30">
+                                <input type="password" class="form-control" placeholder="Contraseña*"name="password" [(ngModel)]="password" #password2="ngModel">
+                            </div>
+                        </div>
+                        
+
+
+
+
+
+
+
+                        <button type="submit"(click)="login()" name="submit">Iniciar sesión</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+</main>
