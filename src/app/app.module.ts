@@ -31,6 +31,8 @@ import { SelectedCategorieComponent } from './pages/selected-categorie/selected-
 import { SelectedTypeComponent } from './pages/selected-type/selected-type.component';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { LoginComponent } from './pages/login/login.component';
+import { DeletemeComponent } from './pages/deleteme/deleteme.component';
+import { PrivacypolicyComponent } from './pages/privacypolicy/privacypolicy.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,9 @@ import { LoginComponent } from './pages/login/login.component';
     NombreFiltroPipe,
     SelectedCategorieComponent,
     SelectedTypeComponent,
-    LoginComponent
+    LoginComponent,
+    DeletemeComponent,
+    PrivacypolicyComponent
   ],
   imports: [
     BrowserModule,

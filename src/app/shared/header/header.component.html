@@ -47,6 +47,13 @@
                 <div class="submenu">
                 </div>
             </li>
+
+            <li class="menu-item ">
+                <a *ngIf="back.lang == 'es'"routerLink="deleteme" class="slide-dropdown">Eliminar cuenta <span ></span></a>
+                <a *ngIf="back.lang == 'en'" routerLink="deleteme" class="slide-dropdown">Delete account <span ></span></a>
+                <div class="submenu">
+                </div>
+            </li>
    
             <li *ngIf="back.idUser === '-1'" class="menu-item ">
                 <a  *ngIf="back.lang == 'en'"  routerLink="login" class="slide-dropdown">Login <span ></span></a>
